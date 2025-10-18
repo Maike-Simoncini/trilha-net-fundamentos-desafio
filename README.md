@@ -1,4 +1,4 @@
-# Desafio de Projeto – Estacionamento (.NET Fundamentos)
+# Desafio de Projeto – Estacionamento (.NET Fundamentos - DIO)
 
 Bem-vindo ao **Desafio de Projeto** da **Trilha de .NET – Fundamentos** da DIO!  
 Neste desafio, foi solicitado a criação de um sistema simples de gerenciamento de estacionamento utilizando os conceitos básicos da linguagem **C#** e da plataforma **.NET**.
