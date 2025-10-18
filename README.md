@@ -1,38 +1,130 @@
-# DIO - Trilha .NET - Fundamentos
-www.dio.me
+# 🚗 Desafio de Projeto – Estacionamento (.NET Fundamentos)
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de fundamentos, da trilha .NET da DIO.
+Bem-vindo ao **Desafio de Projeto** da **Trilha de .NET – Fundamentos** da DIO!  
+Neste desafio, foi solicitado a criação de um sistema simples de gerenciamento de estacionamento utilizando os conceitos básicos da linguagem **C#** e da plataforma **.NET**.
 
-## Contexto
-Você foi contratado para construir um sistema para um estacionamento, que será usado para gerenciar os veículos estacionados e realizar suas operações, como por exemplo adicionar um veículo, remover um veículo (e exibir o valor cobrado durante o período) e listar os veículos.
+---
 
-## Proposta
-Você precisará construir uma classe chamada "Estacionamento", conforme o diagrama abaixo:
-![Diagrama de classe estacionamento](diagrama_classe_estacionamento.png)
+## 📌 Objetivo
 
-A classe contém três variáveis, sendo:
+Desenvolver uma aplicação de console que simule as operações básicas de um estacionamento:
+- Adicionar veículos (por placa)
+- Remover veículos e calcular o valor a ser pago
+- Listar todos os veículos atualmente estacionados
 
-**precoInicial**: Tipo decimal. É o preço cobrado para deixar seu veículo estacionado.
+O foco está na aplicação de conceitos fundamentais como:
+- Classes e objetos
+- Estruturas de controle (`if`, `foreach`, etc.)
+- Coleções (`List<T>`)
+- Entrada e saída de dados no console
+- Manipulação de tipos numéricos (`decimal`, `int`)
 
-**precoPorHora**: Tipo decimal. É o preço por hora que o veículo permanecer estacionado.
+---
 
-**veiculos**: É uma lista de string, representando uma coleção de veículos estacionados. Contém apenas a placa do veículo.
+## 🛠️ Tecnologias Utilizadas
 
-A classe contém três métodos, sendo:
+- **Linguagem**: C#
+- **Plataforma**: .NET (versão compatível com o SDK mais recente)
+- **IDE recomendada**: Visual Studio, Visual Studio Code ou qualquer editor de sua preferência
+- **Conceitos abordados**:
+  - Programação orientada a objetos (POO)
+  - Encapsulamento
+  - Métodos e propriedades
+  - Tratamento básico de entrada do usuário
 
-**AdicionarVeiculo**: Método responsável por receber uma placa digitada pelo usuário e guardar na variável **veiculos**.
+---
 
-**RemoverVeiculo**: Método responsável por verificar se um determinado veículo está estacionado, e caso positivo, irá pedir a quantidade de horas que ele permaneceu no estacionamento. Após isso, realiza o seguinte cálculo: **precoInicial** * **precoPorHora**, exibindo para o usuário.
+## 📁 Estrutura do Projeto
 
-**ListarVeiculos**: Lista todos os veículos presentes atualmente no estacionamento. Caso não haja nenhum, exibir a mensagem "Não há veículos estacionados".
+```
+DesafioFundamentos/
+│
+├── README.md
+├── .gitignore
+├── DesafioFundamentos.csproj
+├── Program.cs                 
+└── Models/
+    └── Estacionamento.cs      
+```
 
-Por último, deverá ser feito um menu interativo com as seguintes ações implementadas:
-1. Cadastrar veículo
-2. Remover veículo
-3. Listar veículos
-4. Encerrar
+---
 
+## 🧩 Diagrama de Classe
+```md
++----------------------------------+
+|          Estacionamento          |
++----------------------------------+
+| - precoInicial: decimal          |
+| - precoPorHora: decimal          |
+| - veiculos: List<string>         |
++----------------------------------+
+| + AdicionarVeiculo()             |
+| + RemoverVeiculo()               |
+| + ListarVeiculos()               |
++----------------------------------+
+```
+---
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+## 🧪 Como Executar
+
+1. **Clone ou baixe** este repositório.
+2. Abra o terminal na pasta do projeto.
+3. Execute o seguinte comando para rodar a aplicação:
+
+```bash
+dotnet run
+```
+
+4. Siga as instruções no console para:
+   - Adicionar veículos
+   - Remover veículos (e ver o valor calculado)
+   - Listar veículos estacionados
+   - Sair do sistema
+
+---
+
+## 💡 Exemplo de Funcionamento
+
+```
+Escolha uma opção:
+1 - Adicionar veículo
+2 - Remover veículo
+3 - Listar veículos
+4 - Sair
+
+Digite a opção: 1
+Digite a placa do veículo para estacionar:
+ABC1234
+
+Veículo estacionado com sucesso!
+
+Digite a opção: 3
+Os veículos estacionados são:
+ABC1234
+
+Digite a opção: 2
+Digite a placa do veículo para remover:
+ABC1234
+Digite a quantidade de horas que o veículo permaneceu estacionado:
+3
+O veículo ABC1234 foi removido e o preço total foi de: R$ 15,00
+```
+
+*(Considerando `precoInicial = 5` e `precoPorHora = 3.33`)*
+
+---
+
+## 📚 Aprendizados
+
+O que aprendi neste desafio:
+- Criar e manipular classes em C#
+- Trabalhar com coleções para armazenar dados em memória
+- Interagir com o usuário via console
+- Aplicar lógica condicional e repetitiva
+- Realizar cálculos com tipos decimais com precisão financeira
+
+---
+
+## 📝 Licença
+
+Este projeto é educacional e pode ser usado livremente para fins de aprendizado.
